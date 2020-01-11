@@ -42,7 +42,10 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <carrier_config device="msm8996">
         //Configs applicable for msms8996.
         </carrier_config>-->
-
+    <carrier_config mcc="404" mnc="94,92,27,20">
+        <boolean name="carrier_volte_available_bool" value="true" />
+        <boolean name="carrier_vt_available_bool" value="true" />
+    </carrier_config>
     <carrier_config>
         <boolean name="apn_expand_bool" value="true" />
         <boolean name="world_phone_bool" value="true" />
@@ -503,6 +506,14 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <boolean name="config_update_service_status" value="true"/>
 </carrier_config>
 
+    <carrier_config mcc="404" mnc="94">
+        <boolean name="carrier_volte_available_bool" value="true" />
+    </carrier_config>
+
+    <carrier_config mcc="404" mnc="95">
+        <boolean name="carrier_volte_available_bool" value="true" />
+    </carrier_config>
+    
     <carrier_config mcc="405" mnc="840">
         <boolean name="carrier_vt_available_bool" value="true" />
         <boolean name="carrier_wfc_ims_available_bool" value="true" />
