@@ -1,0 +1,1 @@
+allow healthd charger_exec:file { entrypoint read execute getattr };
