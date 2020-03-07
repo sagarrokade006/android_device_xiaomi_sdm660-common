@@ -181,3 +181,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Time
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.delta_time.enable=true
+
+# FWK
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    ro.vendor.qti.va_aosp.support=1 \
+    ro.vendor.qti.va_odm.support=1
