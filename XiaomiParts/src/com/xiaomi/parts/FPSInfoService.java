@@ -90,11 +90,11 @@ public class FPSInfoService extends Service {
         FPSView(Context c) {
             super(c);
             float density = c.getResources().getDisplayMetrics().density;
-            int paddingPx = Math.round(5 * density);
+            int paddingPx = Math.round(6 * density);
             setPadding(paddingPx, paddingPx, paddingPx, paddingPx);
             setBackgroundColor(Color.argb(0x60, 0, 0, 0));
 
-            final int textSize = Math.round(12 * density);
+            final int textSize = Math.round(18 * density);
 
             Typeface typeface = Typeface.create("sans-serif-condensed", Typeface.BOLD);
 
@@ -144,16 +144,16 @@ public class FPSInfoService extends Service {
             }
 
             final int W = mNeededWidth;
-            final int LEFT = getWidth()-1;
+            final int RIGHT = getWidth()-1;
 
-            int x = LEFT - mPaddingLeft;
+            int x = RIGHT - mPaddingRight;
             int top = mPaddingTop + 2;
             int bottom = mPaddingTop + mFH - 2;
 
             int y = mPaddingTop - (int)mAscent;
 
             String s=getFPSInfoString();
-            canvas.drawText(s, LEFT-mPaddingLeft-mMaxWidth,
+            canvas.drawText(s, RIGHT-mPaddingRight-mMaxWidth,
                     y-1, mOnlinePaint);
             y += mFH;
         }
@@ -163,7 +163,7 @@ public class FPSInfoService extends Service {
                 return;
             }
 
-            int neededWidth = mPaddingLeft + mPaddingRight + mMaxWidth;
+            int neededWidth = mPaddingRight + mPaddingLeft + mMaxWidth;
             int neededHeight = mPaddingTop + mPaddingBottom + 40;
             if (neededWidth != mNeededWidth || neededHeight != mNeededHeight) {
                 mNeededWidth = neededWidth;
@@ -218,7 +218,7 @@ public class FPSInfoService extends Service {
             WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE|
             WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE,
             PixelFormat.TRANSLUCENT);
-        params.gravity = Gravity.LEFT | Gravity.TOP;
+        params.gravity = Gravity.RIGHT | Gravity.TOP;
         params.setTitle("FPS Info");
 
         startThread();
