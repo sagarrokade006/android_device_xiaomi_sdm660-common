@@ -1,0 +1,46 @@
+Tulip :Enable default emergency settings
+
+# Conflicts:
+#	overlay/frameworks/base/core/res/res/values/config.xml
+#
+# It looks like you may be committing a cherry-pick.
+# If this is not correct, please remove the file
+#	.git/CHERRY_PICK_HEAD
+# and try again.
+
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# Author:    Akhil MS <Akhilsree001@gmail.com>
+# Date:      Fri Apr 17 10:22:04 2020 +0000
+#
+# On branch ten
+# Your branch is ahead of 'origin/ten' by 6 commits.
+#   (use "git push" to publish your local commits)
+#
+# You are currently cherry-picking commit 88276c2.
+#
+# Changes to be committed:
+#	modified:   overlay/frameworks/base/core/res/res/values/config.xml
+#
+# ------------------------ >8 ------------------------
+# Do not modify or remove the line above.
+# Everything below it will be ignored.
+diff --git a/overlay/frameworks/base/core/res/res/values/config.xml b/overlay/frameworks/base/core/res/res/values/config.xml
+index 7b32690..303e648 100644
+--- a/overlay/frameworks/base/core/res/res/values/config.xml
++++ b/overlay/frameworks/base/core/res/res/values/config.xml
+@@ -1036,7 +1036,11 @@
+ 
+     <!-- Whether device supports an alt. ambient display -->
+     <bool name="config_alt_ambient_display">true</bool>
+-    
++
+     <!-- Enable the RingtonePickerActivity in 'com.android.providers.media'. -->
+     <bool name="config_defaultRingtonePickerEnabled">true</bool>
++
++    <!-- Whether the default emergency settings should be shown. -->
++    <bool name="config_showDefaultEmergency">true</bool>
++    
+ </resources>
