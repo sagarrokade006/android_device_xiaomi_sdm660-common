@@ -64,5 +64,4 @@ public class FPSTileService extends TileService {
       tile.setState(isShowing ? Tile.STATE_ACTIVE : Tile.STATE_INACTIVE);
       tile.updateTile();
   }
-
 }
