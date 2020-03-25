@@ -11,3 +11,6 @@ persist.vendor.sys.pay.soter        u:object_r:mlipay_prop:s0
 persist.vendor.sys.provision.status u:object_r:mlipay_prop:s0
 persist.sys.thermal.  u:object_r:thermal_engine_prop:s0
 sys.thermal.          u:object_r:thermal_engine_prop:s0
+
+# Dirac
+persist.audio.dirac.                u:object_r:dirac_prop:s0
