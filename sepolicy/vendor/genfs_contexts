@@ -1,2 +1,6 @@
 genfscon proc /wake_node u:object_r:proc_dt2w:s0
 genfscon debugfs /wlan0   u:object_r:debugfs_wlan:s0
+
+# XiaomiParts
+genfscon sysfs /sys/kernel/sound_control/headphone_gain                     u:object_r:sysfs_headgain:s0
+genfscon sysfs /sys/kernel/sound_control/mic_gain                           u:object_r:sysfs_micgain:s0
