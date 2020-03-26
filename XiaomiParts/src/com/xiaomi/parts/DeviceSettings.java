@@ -50,8 +50,8 @@ public class DeviceSettings extends PreferenceFragment implements
     public static final  String BACKLIGHT_DIMMER_PATH = "/sys/module/mdss_fb/parameters/backlight_dimmer";
 
     public static final String PREF_TORCH_BRIGHTNESS = "torch_brightness";
-    private static final String TORCH_1_BRIGHTNESS_PATH = "/sys/devices/soc/soc:qcom,camera-flash@0/max_brightness";
-    private static final String TORCH_2_BRIGHTNESS_PATH = "/sys/devices/soc/soc:qcom,camera-flash@1/max_brightness";
+    private static final String TORCH_1_BRIGHTNESS_PATH = "/sys/devices/soc/soc:qcom,camera-flash@0/leds/torch-light0/max_brightness";
+    private static final String TORCH_2_BRIGHTNESS_PATH = "/sys/devices/soc/soc:qcom,camera-flash@0/leds/torch-light1/max_brightness";
 
     public static final String PREF_USB_FASTCHARGE = "fastcharge";
     public static final String USB_FASTCHARGE_PATH = "/sys/kernel/fast_charge/force_fast_charge";
