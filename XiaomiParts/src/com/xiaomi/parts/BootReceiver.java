@@ -15,12 +15,8 @@ public class BootReceiver extends BroadcastReceiver implements Utils {
     public static final  String HEADPHONE_GAIN_PATH = "/sys/kernel/sound_control/headphone_gain";
     public static final  String MICROPHONE_GAIN_PATH = "/sys/kernel/sound_control/mic_gain";
 
-    public static final String TORCH_1_BRIGHTNESS_PATH = "/sys/devices/soc/800f000.qcom,spmi/spmi-0/" +
-            "spmi0-03/800f000.qcom,spmi:qcom,pm660l@3:qcom,leds@d300/leds/led:torch_0/" +
-            "max_brightness";
-    public static final String TORCH_2_BRIGHTNESS_PATH = "/sys/devices/soc/800f000.qcom,spmi/spmi-0/" +
-            "spmi0-03/800f000.qcom,spmi:qcom,pm660l@3:qcom,leds@d300/leds/led:torch_1/" +
-            "max_brightness";
+    public static final String TORCH_1_BRIGHTNESS_PATH = "/sys/devices/soc/soc:qcom,camera-flash@0/leds/torch-light0/max_brightness";
+    public static final String TORCH_2_BRIGHTNESS_PATH = "/sys/devices/soc/soc:qcom,camera-flash@0/leds/torch-light1/max_brightness";
 
     public void onReceive(Context context, Intent intent) {
 
