@@ -49,9 +49,9 @@ public class DeviceSettings extends PreferenceFragment implements
     public static final  String PREF_BACKLIGHT_DIMMER = "backlight_dimmer";
     public static final  String BACKLIGHT_DIMMER_PATH = "/sys/module/mdss_fb/parameters/backlight_dimmer";
 
-    public static final String PREF_TORCH_BRIGHTNESS = "torch_brightness";
-    private static final String TORCH_1_BRIGHTNESS_PATH = "/sys/devices/soc/soc:qcom,camera-flash@0/max_brightness";
-    private static final String TORCH_2_BRIGHTNESS_PATH = "/sys/devices/soc/soc:qcom,camera-flash@1/max_brightness";
+    // public static final String PREF_TORCH_BRIGHTNESS = "torch_brightness";
+    // private static final String TORCH_1_BRIGHTNESS_PATH = "/sys/devices/soc/soc:qcom,camera-flash@0/leds/torch-light0/max_brightness";
+    // private static final String TORCH_2_BRIGHTNESS_PATH = "/sys/devices/soc/soc:qcom,camera-flash@0/leds/torch-light1/max_brightness";
 
     public static final String PREF_USB_FASTCHARGE = "fastcharge";
     public static final String USB_FASTCHARGE_PATH = "/sys/kernel/fast_charge/force_fast_charge";
@@ -71,10 +71,10 @@ public class DeviceSettings extends PreferenceFragment implements
         CustomSeekBarPreference microphone_gain = (CustomSeekBarPreference) findPreference(PREF_MICROPHONE_GAIN);
         microphone_gain.setOnPreferenceChangeListener(this);
 
-        CustomSeekBarPreference torch_brightness = (CustomSeekBarPreference) findPreference(PREF_TORCH_BRIGHTNESS);
-        torch_brightness.setEnabled(FileUtils.fileWritable(TORCH_1_BRIGHTNESS_PATH) &&
-                FileUtils.fileWritable(TORCH_2_BRIGHTNESS_PATH));
-        torch_brightness.setOnPreferenceChangeListener(this);
+        // CustomSeekBarPreference torch_brightness = (CustomSeekBarPreference) findPreference(PREF_TORCH_BRIGHTNESS);
+        // torch_brightness.setEnabled(FileUtils.fileWritable(TORCH_1_BRIGHTNESS_PATH) &&
+        //         FileUtils.fileWritable(TORCH_2_BRIGHTNESS_PATH));
+        // torch_brightness.setOnPreferenceChangeListener(this);
 
         boolean enhancerEnabled;
         try {
@@ -135,10 +135,10 @@ public class DeviceSettings extends PreferenceFragment implements
     public boolean onPreferenceChange(Preference preference, Object value) {
         final String key = preference.getKey();
         switch (key) {
-            case PREF_TORCH_BRIGHTNESS:
-                FileUtils.setValue(TORCH_1_BRIGHTNESS_PATH, (int) value);
-                FileUtils.setValue(TORCH_2_BRIGHTNESS_PATH, (int) value);
-                break;
+            // case PREF_TORCH_BRIGHTNESS:
+            //     FileUtils.setValue(TORCH_1_BRIGHTNESS_PATH, (int) value);
+            //     FileUtils.setValue(TORCH_2_BRIGHTNESS_PATH, (int) value);
+            //     break;
 
             case PREF_VIBRATION_STRENGTH:
                 double vibrationValue = (int) value / 100.0 * (MAX_VIBRATION - MIN_VIBRATION) + MIN_VIBRATION;

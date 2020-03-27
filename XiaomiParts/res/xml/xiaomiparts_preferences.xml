@@ -98,7 +98,7 @@
             android:summary="@string/fastcharge_summary" />
     </PreferenceCategory>
 
-    <PreferenceCategory
+    <!-- <PreferenceCategory
         android:key="torch"
         android:title="@string/torch_category">
         <com.xiaomi.parts.preferences.CustomSeekBarPreference
@@ -108,7 +108,7 @@
             app:min="1"
             android:icon="@drawable/ic_torch"
             android:title="@string/torch_brightness_title" />
-    </PreferenceCategory>
+    </PreferenceCategory> -->
 
     <PreferenceCategory
         android:key="vibration"
