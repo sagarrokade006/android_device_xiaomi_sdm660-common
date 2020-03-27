@@ -102,10 +102,6 @@ PRODUCT_PACKAGES += \
     android.hardware.audio.effect@5.0-impl:32 \
     android.hardware.audio.effect@2.0-service \
     android.hardware.soundtrigger@2.1-impl:32 \
-    android.hardware.bluetooth.audio@2.0 \
-    android.hardware.bluetooth.audio@2.0-impl \
-    android.hardware.bluetooth.a2dp@1.0-impl \
-    android.hardware.bluetooth.a2dp@1.0-service \
     audio.a2dp.default \
     audio_amplifier.sdm660 \
     audio.primary.sdm660 \
