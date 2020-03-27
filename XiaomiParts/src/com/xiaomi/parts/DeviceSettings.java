@@ -4,13 +4,13 @@ import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.Context;
-import android.content.SharedPreferences;
+// import android.content.SharedPreferences;
 import android.os.Bundle;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceFragment;
-import androidx.preference.PreferenceManager;
-import androidx.preference.SwitchPreference;
+// import androidx.preference.PreferenceManager;
+// import androidx.preference.SwitchPreference;
 
 import com.xiaomi.parts.kcal.KCalSettingsActivity;
 import com.xiaomi.parts.ambient.DozeSettingsActivity;
@@ -36,7 +36,7 @@ public class DeviceSettings extends PreferenceFragment implements
     public static final String PREF_VIBRATION_STRENGTH = "vibration_strength";
     public static final String VIBRATION_STRENGTH_PATH = "/sys/devices/virtual/timed_output/vibrator/vtg_level";
 
-    public static final String PREF_KEY_FPS_INFO = "fps_info";
+    // public static final String PREF_KEY_FPS_INFO = "fps_info";
 
     // value of vtg_min and vtg_max
     public static final int MIN_VIBRATION = 116;
@@ -107,9 +107,9 @@ public class DeviceSettings extends PreferenceFragment implements
         backlightDimmer.setChecked(BacklightDimmer.isCurrentlyEnabled(this.getContext()));
         backlightDimmer.setOnPreferenceChangeListener(new BacklightDimmer(getContext()));
 
-        SwitchPreference fpsInfo = (SwitchPreference) findPreference(PREF_KEY_FPS_INFO);
-        fpsInfo.setChecked(prefs.getBoolean(PREF_KEY_FPS_INFO, false));
-        fpsInfo.setOnPreferenceChangeListener(this);
+        // SwitchPreference fpsInfo = (SwitchPreference) findPreference(PREF_KEY_FPS_INFO);
+        // fpsInfo.setChecked(prefs.getBoolean(PREF_KEY_FPS_INFO, false));
+        // fpsInfo.setOnPreferenceChangeListener(this);
 
         SwitchPreference usbfastCharger = (SwitchPreference) findPreference(PREF_USB_FASTCHARGE);
         usbfastCharger.setEnabled(FileUtils.fileWritable(USB_FASTCHARGE_PATH));
@@ -179,15 +179,15 @@ public class DeviceSettings extends PreferenceFragment implements
                     DiracService.sDiracUtils.setLevel(String.valueOf(value));
                 }
                 break;
-            case PREF_KEY_FPS_INFO:
-                boolean enabled = (Boolean) value;
-                Intent fpsinfo = new Intent(this.getContext(), FPSInfoService.class);
-                if (enabled) {
-                    this.getContext().startService(fpsinfo);
-                } else {
-                    this.getContext().stopService(fpsinfo);
-                }
-                break;
+            // case PREF_KEY_FPS_INFO:
+            //     boolean enabled = (Boolean) value;
+            //     Intent fpsinfo = new Intent(this.getContext(), FPSInfoService.class);
+            //     if (enabled) {
+            //         this.getContext().startService(fpsinfo);
+            //     } else {
+            //         this.getContext().stopService(fpsinfo);
+            //     }
+            //     break;
 
             case PREF_USB_FASTCHARGE:
                 FileUtils.setValue(USB_FASTCHARGE_PATH, (boolean) value);
