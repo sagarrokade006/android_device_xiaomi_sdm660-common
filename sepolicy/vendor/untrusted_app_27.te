@@ -1,1 +1,9 @@
 allow untrusted_app_27 persist_camera_prop:file { read };
+allow untrusted_app_27 persist_camera_prop:file { open };
+allow untrusted_app_27 rootfs:dir { read open };
+allow untrusted_app_27 proc:file { getattr };
+allow untrusted_app_27 proc_keys:file { getattr };
+allow untrusted_app_27 proc_kmsg:file { getattr };
+allow untrusted_app_27 proc_misc:file { getattr };
+allow untrusted_app_27 proc_stat:file { getattr };
+allow untrusted_app_27 proc_iomem:file { getattr };
