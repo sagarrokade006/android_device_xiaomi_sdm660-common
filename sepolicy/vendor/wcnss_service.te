@@ -1,0 +1,2 @@
+allow wcnss_service wigig_core_prop:file { read };
+
