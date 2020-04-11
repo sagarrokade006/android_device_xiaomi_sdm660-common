@@ -70,7 +70,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.camera.expose.aux=1 \
     persist.vendor.camera.ltm.overlap=13 \
     persist.vendor.camera.fdvideo=1 \
-    vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,com.qualcomm.qti.qmmi
+    vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,com.qualcomm.qti.qmmi,org.lineageos.snap,com.motorola.faceunlock
 
 # Codec2 switch
 PRODUCT_PROPERTY_OVERRIDES += \
