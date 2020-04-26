@@ -69,8 +69,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.camera.exif.model=Redmi Note 6 Pro \
     persist.vendor.camera.expose.aux=1 \
     persist.vendor.camera.ltm.overlap=13 \
-    persist.vendor.camera.fdvideo=1 \
-    vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,com.qualcomm.qti.qmmi,org.lineageos.snap,com.motorola.faceunlock
+    persist.vendor.camera.fdvideo=1 
+
+# Camera Aux
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,org.lineageos.snap,com.motorola.faceunlock
 
 # Codec2 switch
 PRODUCT_PROPERTY_OVERRIDES += \
